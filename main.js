@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const resultElement = document.getElementById('result');
 const pickButton = document.getElementById('pick-button');
+const characterElement = document.getElementById('character');
 
 const options = [
   "앵깅왕 코딱지 파서 보여주기",
@@ -49,6 +50,12 @@ const options = [
 
 pickButton.addEventListener('click', () => {
   resultElement.style.opacity = 0;
+
+  // Trigger animation
+  characterElement.classList.add('is-teased');
+  setTimeout(() => {
+    characterElement.classList.remove('is-teased');
+  }, 500); // Animation duration is 0.5s
 
   setTimeout(() => {
     const randomIndex = Math.floor(Math.random() * options.length);

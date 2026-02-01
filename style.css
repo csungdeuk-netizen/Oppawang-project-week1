@@ -84,3 +84,74 @@ h1 {
     transform: translateY(0);
     box-shadow: 0 4px 8px var(--shadow-color);
 }
+
+/* Character Styles */
+.character-container {
+  margin: 0 auto 2rem;
+  position: relative;
+  width: 100px;
+  height: 150px;
+}
+
+.character-head {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  background-color: #fdd;
+  border-radius: 50%;
+  border: 2px solid var(--text-color);
+}
+
+.character-eye {
+  position: absolute;
+  top: 35%;
+  width: 10px;
+  height: 10px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+}
+
+.character-eye.left {
+  left: 25%;
+}
+
+.character-eye.right {
+  right: 25%;
+}
+
+.character-mouth {
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 5px;
+  background-color: var(--text-color);
+  border-radius: 5px;
+}
+
+.character-body {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 70px;
+  background-color: #fcc;
+  border-radius: 10px;
+  border: 2px solid var(--text-color);
+}
+
+.is-teased {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px) rotate(-5deg); }
+  50% { transform: translateX(5px) rotate(5deg); }
+  75% { transform: translateX(-5px) rotate(-5deg); }
+}
