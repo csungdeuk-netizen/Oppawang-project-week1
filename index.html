@@ -1,30 +1,25 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>앵깅왕 괴롭히기</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>앵깅왕 괴롭히기</title>
+    <link href='/style.css' rel='stylesheet'>
 </head>
 <body>
-  <div class="theme-switcher">
+<div class="theme-switcher">
     <button id="theme-toggle">🌙</button>
-  </div>
-  <div class="container">
+</div>
+<div class="container">
     <div id="character" class="character-container">
-      <div class="character-head">
-        <div class="character-eye left"></div>
-        <div class="character-eye right"></div>
-        <div class="character-mouth"></div>
-      </div>
-      <div class="character-body"></div>
+        <img id="character-img" src="https://api.dicebear.com/9.x/adventurer/svg?seed=Aengging-wang&backgroundColor=f2d3d3&hair=long16&mouth=variant02" alt="Character" />
     </div>
     <h1>앵깅왕 괴롭히기 목록</h1>
     <div id="result">
-      <p>버튼을 눌러 앵깅왕을 괴롭힐 방법을 찾아보세요!</p>
+        <p>버튼을 눌러 앵깅왕을 괴롭힐 방법을 찾아보세요!</p>
     </div>
     <button id="pick-button">추첨</button>
-  </div>
-  <script defer type="text/javascript" src="/main.js"></script>
+</div>
+<script defer type="text/javascript" src="/main.js"></script>
 </body>
 </html>
