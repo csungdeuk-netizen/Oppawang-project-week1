@@ -1,3 +1,36 @@
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+// Function to set the theme
+const setTheme = (theme) => {
+  if (theme === 'dark') {
+    body.classList.add('dark-mode');
+    themeToggle.textContent = '☀️';
+  } else {
+    body.classList.remove('dark-mode');
+    themeToggle.textContent = '🌙';
+  }
+};
+
+// Event listener for the toggle button
+themeToggle.addEventListener('click', () => {
+  const isDarkMode = body.classList.contains('dark-mode');
+  if (isDarkMode) {
+    localStorage.setItem('theme', 'light');
+    setTheme('light');
+  } else {
+    localStorage.setItem('theme', 'dark');
+    setTheme('dark');
+  }
+});
+
+// Check for saved theme on page load
+document.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  setTheme(savedTheme);
+});
+
+
 const resultElement = document.getElementById('result');
 const pickButton = document.getElementById('pick-button');
 
