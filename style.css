@@ -1,1 +1,53 @@
-/* Add styles here */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+body {
+  background-color: #1a1a1a;
+  color: #fff;
+  font-family: 'Nanum Pen Script', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
+  color: #ffc107;
+  text-shadow: 2px 2px 4px #000;
+}
+
+#result {
+  margin: 2rem 0;
+  min-height: 50px;
+  font-size: 2.5rem;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#pick-button {
+  background-color: #ffc107;
+  color: #1a1a1a;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-family: 'Nanum Pen Script', cursive;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+#pick-button:hover {
+  background-color: #ffca2c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+#pick-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
